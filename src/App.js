@@ -4,7 +4,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            index: index,
+            index: [Math.floor(Math.random()*(Object.keys(quotes).length))],
         };
         this.handleClick = this.handleClick.bind(this);
         this.componentDidMount = this.componentDidMount.bind(this);
@@ -52,9 +52,5 @@ const quotes = [
     {author: "A. B. See", quote: "Dee Eee Fff"},
     {author: "Pater Noster", quote: "Et tu Brute"}
 ];
-
-const index = [Math.floor(Math.random()*(Object.keys(quotes).length))];
-
-console.log(index);
 
 export default App
